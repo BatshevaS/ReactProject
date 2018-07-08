@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="../build/react.js"></script>
+    <script src="../build/react-dom.js"></script>
+    <script src="../build/browser.min.js"></script>
+</head>
+
+<body>
+
+    <div id="root"></div>
+
+    <script>
+
+        function elementFormt(a, b) {
+        return React.createElement(
+            "div",
+            null,
+            React.createElement("h1", null, "Hello, ", a, " ", b, "!"),
+            React.createElement(
+            "table",
+            null,
+            React.createElement(
+                "tbody",
+                null,
+                React.createElement(
+                "tr",
+                null,
+                React.createElement("td", null, "1"),
+                React.createElement("td", null, "2")
+                ),
+                React.createElement(
+                "tr",
+                null,
+                React.createElement("td", null, "3"),
+                React.createElement("td", null, "4")
+                )
+            )
+            )
+        );
+        }
+
+        
+        ReactDOM.render(
+        React.createElement(
+            "div",
+            null,
+            elementFormt("Nir", "Z."),
+            elementFormt("Shmulik", "B.")
+        ),
+        document.getElementById("root")
+        );
+
+    </script>
+
+</body>
+
+</html>
